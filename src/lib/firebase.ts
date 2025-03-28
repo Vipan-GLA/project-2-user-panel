@@ -5,13 +5,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAPqlYJgJLXHtCnYKlJNib0xrvwQMWzFkM",
-  authDomain: "adesh-project.firebaseapp.com",
-  databaseURL: "https://adesh-project-default-rtdb.firebaseio.com",
-  projectId: "adesh-project",
-  storageBucket: "adesh-project.firebasestorage.app",
-  messagingSenderId: "379111310921",
-  appId: "1:379111310921:web:dbf7b5a9c723aa2e702198"
+  apiKey: "AIzaSyCOC4FUS6CChQjwZN_mLRLkHhEe6cNMpoQ",
+  authDomain: "foodorderingapp-208f7.firebaseapp.com",
+  projectId: "foodorderingapp-208f7",
+  storageBucket: "foodorderingapp-208f7.firebasestorage.app",
+  messagingSenderId: "205998850961",
+  appId: "1:205998850961:web:d99103ff3288ce7e425030"
 };
 
 const app = initializeApp(firebaseConfig);

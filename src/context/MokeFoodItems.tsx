@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import toast from 'react-hot-toast';
@@ -110,91 +111,91 @@ import toast from 'react-hot-toast';
 //     },
 // ];
 
-const mockFoodItems = [
-    // Previous items...
-    {
-        name: 'Chicken Wings',
-        price: 14,
-        description: 'Crispy fried chicken wings tossed in your choice of sauce.',
-        image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80',
-        category: 'non-vegetarian',
-    },
-    {
-        name: 'Vegetable Stir Fry',
-        price: 12,
-        description: 'A mix of fresh vegetables stir-fried in a savory sauce.',
-        image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80',
-        category: 'vegetarian',
-    },
-    {
-        name: 'Fish and Chips',
-        price: 18,
-        description: 'Crispy battered fish served with golden fries and tartar sauce.',
-        image: 'https://images.unsplash.com/photo-1551248429-40975aa4de74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-        category: 'non-vegetarian',
-    },
-    {
-        name: 'Falafel Wrap',
-        price: 10,
-        description: 'Crispy falafel balls wrapped in a pita with hummus and veggies.',
-        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80',
-        category: 'vegetarian',
-    },
-    {
-        name: 'BBQ Ribs',
-        price: 28,
-        description: 'Slow-cooked ribs glazed with smoky BBQ sauce.',
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
-        category: 'non-vegetarian',
-    },
-    {
-        name: 'Mushroom Risotto',
-        price: 16,
-        description: 'Creamy risotto with sautéed mushrooms and parmesan cheese.',
-        image: 'https://images.unsplash.com/photo-1608212589631-2c1a5c4baf5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-        category: 'vegetarian',
-    },
-    {
-        name: 'Shrimp Scampi',
-        price: 24,
-        description: 'Juicy shrimp sautéed in garlic butter and white wine sauce.',
-        image: 'https://images.unsplash.com/photo-1605209671121-67020c996b3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-        category: 'non-vegetarian',
-    },
-    {
-        name: 'Tiramisu',
-        price: 9,
-        description: 'Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
-        image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-        category: 'dessert',
-    },
-    {
-        name: 'Pho',
-        price: 14,
-        description: 'Vietnamese noodle soup with beef, herbs, and rice noodles.',
-        image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-        category: 'non-vegetarian',
-    },
-    {
-        name: 'Fruit Tart',
-        price: 8,
-        description: 'A sweet tart filled with custard and topped with fresh fruits.',
-        image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-        category: 'dessert',
-    },
-];
+// const mockFoodItems = [
+//     // Previous items...
+//     {
+//         name: 'Chicken Wings',
+//         price: 14,
+//         description: 'Crispy fried chicken wings tossed in your choice of sauce.',
+//         image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80',
+//         category: 'non-vegetarian',
+//     },
+//     {
+//         name: 'Vegetable Stir Fry',
+//         price: 12,
+//         description: 'A mix of fresh vegetables stir-fried in a savory sauce.',
+//         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80',
+//         category: 'vegetarian',
+//     },
+//     {
+//         name: 'Fish and Chips',
+//         price: 18,
+//         description: 'Crispy battered fish served with golden fries and tartar sauce.',
+//         image: 'https://images.unsplash.com/photo-1551248429-40975aa4de74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+//         category: 'non-vegetarian',
+//     },
+//     {
+//         name: 'Falafel Wrap',
+//         price: 10,
+//         description: 'Crispy falafel balls wrapped in a pita with hummus and veggies.',
+//         image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80',
+//         category: 'vegetarian',
+//     },
+//     {
+//         name: 'BBQ Ribs',
+//         price: 28,
+//         description: 'Slow-cooked ribs glazed with smoky BBQ sauce.',
+//         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
+//         category: 'non-vegetarian',
+//     },
+//     {
+//         name: 'Mushroom Risotto',
+//         price: 16,
+//         description: 'Creamy risotto with sautéed mushrooms and parmesan cheese.',
+//         image: 'https://images.unsplash.com/photo-1608212589631-2c1a5c4baf5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+//         category: 'vegetarian',
+//     },
+//     {
+//         name: 'Shrimp Scampi',
+//         price: 24,
+//         description: 'Juicy shrimp sautéed in garlic butter and white wine sauce.',
+//         image: 'https://images.unsplash.com/photo-1605209671121-67020c996b3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+//         category: 'non-vegetarian',
+//     },
+//     {
+//         name: 'Tiramisu',
+//         price: 9,
+//         description: 'Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
+//         image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+//         category: 'dessert',
+//     },
+//     {
+//         name: 'Pho',
+//         price: 14,
+//         description: 'Vietnamese noodle soup with beef, herbs, and rice noodles.',
+//         image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
+//         category: 'non-vegetarian',
+//     },
+//     {
+//         name: 'Fruit Tart',
+//         price: 8,
+//         description: 'A sweet tart filled with custard and topped with fresh fruits.',
+//         image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+//         category: 'dessert',
+//     },
+// ];
 
 export const uploadMockData = async () => {
-    try {
-        const foodCollection = collection(db, 'foods');
+    // try {
+    //     const foodCollection = collection(db, 'foods');
 
-        for (const food of mockFoodItems) {
-            await addDoc(foodCollection, food);
-        }
+    //     for (const food of mockFoodItems) {
+    //         await addDoc(foodCollection, food);
+    //     }
 
-        toast.success('Mock food items added successfully!');
-    } catch (error) {
-        console.error('Error uploading data:', error);
-        toast.error('Failed to upload mock data.');
-    }
+    //     toast.success('Mock food items added successfully!');
+    // } catch (error) {
+    //     console.error('Error uploading data:', error);
+    //     toast.error('Failed to upload mock data.');
+    // }
 };
