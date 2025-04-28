@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
@@ -64,7 +65,7 @@ export default function Checkout() {
       });
 
       setStep(3);
-      
+
       setTimeout(() => {
         clearCart();
         navigate('/profile');
@@ -84,9 +85,8 @@ export default function Checkout() {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                step >= 1 ? 'bg-blue-600 text-white' : 'bg-gray-200'
-              }`}
+              className={`w-8 h-8 rounded-full flex items-center justify-center ${step >= 1 ? 'bg-blue-600 text-white' : 'bg-gray-200'
+                }`}
             >
               1
             </div>
@@ -97,9 +97,8 @@ export default function Checkout() {
           <div className="flex-1 mx-4 border-t-2 border-gray-200"></div>
           <div className="flex items-center">
             <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                step >= 2 ? 'bg-blue-600 text-white' : 'bg-gray-200'
-              }`}
+              className={`w-8 h-8 rounded-full flex items-center justify-center ${step >= 2 ? 'bg-blue-600 text-white' : 'bg-gray-200'
+                }`}
             >
               2
             </div>
@@ -110,9 +109,8 @@ export default function Checkout() {
           <div className="flex-1 mx-4 border-t-2 border-gray-200"></div>
           <div className="flex items-center">
             <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                step >= 3 ? 'bg-blue-600 text-white' : 'bg-gray-200'
-              }`}
+              className={`w-8 h-8 rounded-full flex items-center justify-center ${step >= 3 ? 'bg-blue-600 text-white' : 'bg-gray-200'
+                }`}
             >
               3
             </div>

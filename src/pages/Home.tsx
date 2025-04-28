@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../lib/firebase';
-import { useCart } from '../context/CartContext';
 import { Search, Filter } from 'lucide-react';
 import FoodCard from '../components/FoodCard';
 import toast from 'react-hot-toast';
-import { uploadMockData } from '../context/MokeFoodItems';
 
 interface FoodItem {
   id: string;
@@ -124,13 +122,6 @@ export default function Home() {
           ))}
         </div>
       )}
-      {/* <button
-        onClick={uploadMockData}
-        className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all"
-      >
-        Upload Mock Data
-      </button> */}
-
     </div>
   );
 }

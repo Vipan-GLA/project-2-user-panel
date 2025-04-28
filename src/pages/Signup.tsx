@@ -20,14 +20,17 @@ export default function Signup() {
     try {
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(user, { displayName: name });
-      
+
+      const role = 'user';
+
       await setDoc(doc(db, 'users', user.uid), {
         name,
         email,
+        role,
         createdAt: new Date().toISOString(),
       });
 
-      toast.success('Account created successfully!');
+      toast.success(`Account created successfully! ${role === 'user' ? '(User)' : ''}`);
       navigate('/');
     } catch (error) {
       toast.error('Failed to create account. Please try again.');
